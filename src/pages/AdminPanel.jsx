@@ -69,7 +69,7 @@ const AdminPanel = () => {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-lg bg-[#151f2e] text-sm min-w-[220px] focus-within:border-blue-600">
+          <div className="flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-lg bg-card text-sm min-w-55 focus-within:border-blue-600">
             <FaSearch />
             <input
               type="text"
@@ -83,7 +83,7 @@ const AdminPanel = () => {
       {/* File Upload */}
       <label
         htmlFor="fileInput"
-        className="block my-4 border-dashed border-2 border-gray-700 rounded-xl px-12 py-8 text-center cursor-pointer hover:border-blue-600 hover:bg-[#151f2e]/50 transition"
+        className="block my-4 border-dashed border-2 border-gray-700 rounded-xl px-12 py-8 text-center cursor-pointer hover:border-blue-600 hover:bg-card/50 transition"
       >
         <input
           type="file"
