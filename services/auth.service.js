@@ -69,3 +69,24 @@ export const loginUser = async ({ email, password }) => {
     user: { id: user._id, username: user.username, role: user.role },
   };
 };
+
+
+// ? LGGOUT
+
+export const logoutUser = async (refreshToken) => {
+  if (!refreshToken) {
+    throw new Error("Refresh token missing");
+  }
+
+  // find the user with this refresh token
+  const user = await User.findOne({ refreshToken });
+  if (!user) {
+    return null;
+  }
+
+  // remove refresh token
+  user.refreshToken = null;
+  await user.save();
+
+  return user;
+};
