@@ -11,11 +11,21 @@
     "dev": "node --watch app.js"
   },
   "dependencies": {
+    "@google/genai": "^1.41.0",
+    "@langchain/community": "^1.1.15",
+    "@langchain/core": "^1.1.24",
+    "@langchain/textsplitters": "^1.0.1",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
+    "d3-dsv": "^2.0.0",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.2.1"
+    "langchain": "^1.2.24",
+    "mongoose": "^9.2.1",
+    "multer": "^2.0.2",
+    "pdf-parse": "npm:pdf-parse-fork@^1.2.0",
+    "pdf-parse-fork": "^1.2.0",
+    "voyageai": "^0.1.0"
   }
 }
