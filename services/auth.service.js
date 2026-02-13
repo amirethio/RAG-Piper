@@ -1,7 +1,10 @@
-// services/auth.service.js
 import bcrypt from "bcrypt";
 import User from "../models/user.models.js";
+import jwt from "jsonwebtoken";
 
+const { ACCESS_SECRET_KEY, REFRESH_SECRET_KEY } = process.env;
+
+// ? REGISTER
 export const registerUser = async ({ email, password }) => {
   if (!email || !password) {
     throw new Error("Email and password are required");
@@ -24,4 +27,45 @@ export const registerUser = async ({ email, password }) => {
   });
 
   return user;
+};
+
+// ? LOGIN
+
+export const loginUser = async ({ email, password }) => {
+  if (!email || !password) {
+    throw new Error("Username and email are required");
+  }
+
+  // find user in MongoDB
+  const user = await User.findOne({ email }).select("+password");
+  if (!user) {
+    throw new Error("User not found");
+  }
+
+  // check password
+  console.log(password, user.password);
+
+  const validPassword = await bcrypt.compare(password, user.password);
+  if (!validPassword) {
+    throw new Error("Incorrect password");
+  }
+
+  // generate JWT tokens
+  const payload = { id: user._id, email: user.email, role: user.role };
+  const accessToken = jwt.sign(payload, ACCESS_SECRET_KEY, {
+    expiresIn: "15m",
+  });
+  const refreshToken = jwt.sign(payload, REFRESH_SECRET_KEY, {
+    expiresIn: "1d",
+  });
+
+  // save refresh token in DB
+  User.refreshToken = refreshToken;
+  await user.save();
+
+  return {
+    accessToken,
+    refreshToken,
+    user: { id: user._id, username: user.username, role: user.role },
+  };
 };
