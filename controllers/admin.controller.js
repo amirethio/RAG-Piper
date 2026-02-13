@@ -13,17 +13,26 @@ export const uploadDocument = async (req, res) => {
 
     //* load the document
     const loadDoc = await loadFile(filePaths);
+    console.log("load the document");
 
     // * split the document
     const splitDoc = await splitDocuments(loadDoc);
+    console.log("split the document");
 
     // *embed the document
     const embedDoc = await embedDocuments(splitDoc);
+    console.log("embed the document");
 
     //* store in db
     await storeEmbeddings(embedDoc);
-    res.status(200).json({ message: "File processed successfully" });
+    console.log("store in db");
+
+    res
+      .status(200)
+      .json({ sucess: true, message: "File processed successfully" });
   } catch (error) {
+    console.log(error);
+
     res.status(500).json({ message: "Internal server error" });
   }
 };

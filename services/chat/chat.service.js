@@ -9,11 +9,14 @@ const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 export const chatService = async (question) => {
   try {
+
+
     const embedRes = await client.embed({
       input: [question],
       model: "voyage-3.5",
     });
     const queryEmbedding = embedRes?.data[0]?.embedding;
+console.log("finish embading and next vecor search");
 
     // vector search in atlas database
     const results = await Document.aggregate([
@@ -28,6 +31,9 @@ export const chatService = async (question) => {
       },
     ]);
 
+
+  console.log("gemini's turn to answer ");
+  
     // building the prompt for gemini
     const ragContext = results.map((doc) => doc.text).join("\n\n");
     const prompt = `You are an expert assistant for the 

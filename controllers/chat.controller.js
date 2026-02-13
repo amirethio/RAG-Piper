@@ -11,6 +11,8 @@ export const askQuestion = async (req, res) => {
     }
 
     // Call the service to get answer
+    console.log("calling cgat service");
+
     const answer = await chatService(question);
 
     res.status(200).json({
@@ -19,7 +21,7 @@ export const askQuestion = async (req, res) => {
       answer,
     });
   } catch (error) {
-    // console.error("Chat error:", error);
+    console.error("Chat error:", error);
     res.status(500).json({
       success: false,
       message: "Internal server error",
