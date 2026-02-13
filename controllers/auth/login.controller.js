@@ -4,8 +4,6 @@ export const login = async (req, res) => {
   try {
     const { accessToken, refreshToken, user } = await loginUser(req.body);
 
-    console.log(accessToken, refreshToken, user);
-    
     // * setting refresh token to cookie
 
     res.cookie("refreshToken", refreshToken, {

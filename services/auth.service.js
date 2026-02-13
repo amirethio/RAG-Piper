@@ -43,8 +43,6 @@ export const loginUser = async ({ email, password }) => {
   }
 
   // check password
-  console.log(password, user.password);
-
   const validPassword = await bcrypt.compare(password, user.password);
   if (!validPassword) {
     throw new Error("Incorrect password");
@@ -60,7 +58,7 @@ export const loginUser = async ({ email, password }) => {
   });
 
   // save refresh token in DB
-  User.refreshToken = refreshToken;
+  user.refreshToken = refreshToken;
   await user.save();
 
   return {
@@ -69,7 +67,6 @@ export const loginUser = async ({ email, password }) => {
     user: { id: user._id, username: user.username, role: user.role },
   };
 };
-
 
 // ? LGGOUT
 
@@ -89,4 +86,32 @@ export const logoutUser = async (refreshToken) => {
   await user.save();
 
   return user;
+};
+
+// ? REFRESH TOKEN
+
+export const refreshToken = async (refreshToken) => {
+  if (!refreshToken) throw new Error("Refresh token missing");
+
+  let decoded;
+  try {
+    decoded = jwt.verify(refreshToken, REFRESH_SECRET_KEY);
+  } catch (err) {
+    throw new Error("Invalid or expired refresh token");
+  }
+
+  // Find user with this refresh token in DB
+  const user = await User.findOne({ refreshToken });
+  if (!user) throw new Error("User not found");
+
+  // Issue new access token
+  const payload = { id: user._id, email: user.email, role: user.role };
+  const accessToken = jwt.sign(payload, ACCESS_SECRET_KEY, {
+    expiresIn: "15m",
+  });
+
+  return {
+    accessToken,
+    user: { id: user._id, email: user.email, role: user.role },
+  };
 };
