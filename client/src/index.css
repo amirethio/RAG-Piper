@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Fonts --- */
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --font-mono: "Space Mono", "monospace";
+
+  /* --- Primary Colors (Pied Piper Green Palette) --- */
+  --color-background: #101927;
+  --color-foreground: #e6ecea;
+
+  --color-card: #151f2e; 
+  --color-card-foreground: #e6ecea;
+
+  --color-popover: #131715;
+  --color-popover-foreground: #e6ecea;
+
+  --color-primary: #22c55e;
+  --color-primary-foreground: #080d14;
+
+  --color-secondary: #1c2636;
+  --color-secondary-foreground: #d9e1dd;
+
+  --color-muted: #212824;
+  --color-muted-foreground: #94a3b8;
+
+  --color-accent: #22c55e;
+  --color-accent-foreground: #0b110e;
+
+  --color-destructive: #f04f4f;
+  --color-destructive-foreground: #fafafa;
+
+  --color-border: #1e293b;  
+  --color-input: #2a332e;
+  --color-ring: #22c55e;
+
+  /* --- Chart Colors --- */
+  --color-chart-1: #22c55e;
+  --color-chart-2: #2e9b87;
+  --color-chart-3: #163d4d;
+  --color-chart-4: #e0e762;
+  --color-chart-5: #ffd778;
+
+  /* --- Border Radius --- */
+  --radius-lg: 0.625rem;
+  --radius-md: calc(0.625rem - 2px);
+  --radius-sm: calc(0.625rem - 4px);
+
+  --tracking-tight: -0.05em;
+  --leading-tight: 1.1;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+    line-height: 1.5;
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
