@@ -1,7 +1,7 @@
 import Register from "./pages/Register";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
-import AdminPanel from "./components/AdminPanel";
+import AdminPanel from "./pages/AdminPanel";
 import Login from "./pages/Login";
 import { Routes, Route } from "react-router";
 import Landing from "./pages/Landing";
