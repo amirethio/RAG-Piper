@@ -1,0 +1,1672 @@
+diff --git a/package-lock.json b/package-lock.json
+index 745f322..2744f4a 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -9,6 +9,7 @@
+       "version": "0.0.0",
+       "dependencies": {
+         "@tailwindcss/postcss": "^4.1.18",
++        "axios": "^1.13.5",
+         "react": "^19.2.0",
+         "react-dom": "^19.2.0",
+         "react-icons": "^5.5.0",
+@@ -2140,6 +2141,12 @@
+       "dev": true,
+       "license": "Python-2.0"
+     },
++    "node_modules/asynckit": {
++      "version": "0.4.0",
++      "resolved": "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz",
++      "integrity": "sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==",
++      "license": "MIT"
++    },
+     "node_modules/autoprefixer": {
+       "version": "10.4.24",
+       "resolved": "https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.24.tgz",
+@@ -2177,6 +2184,17 @@
+         "postcss": "^8.1.0"
+       }
+     },
++    "node_modules/axios": {
++      "version": "1.13.5",
++      "resolved": "https://registry.npmjs.org/axios/-/axios-1.13.5.tgz",
++      "integrity": "sha512-cz4ur7Vb0xS4/KUN0tPWe44eqxrIu31me+fbang3ijiNscE129POzipJJA6zniq2C/Z6sJCjMimjS8Lc/GAs8Q==",
++      "license": "MIT",
++      "dependencies": {
++        "follow-redirects": "^1.15.11",
++        "form-data": "^4.0.5",
++        "proxy-from-env": "^1.1.0"
++      }
++    },
+     "node_modules/balanced-match": {
+       "version": "1.0.2",
+       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
+@@ -2240,6 +2258,19 @@
+         "node": "^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7"
+       }
+     },
++    "node_modules/call-bind-apply-helpers": {
++      "version": "1.0.2",
++      "resolved": "https://registry.npmjs.org/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz",
++      "integrity": "sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ==",
++      "license": "MIT",
++      "dependencies": {
++        "es-errors": "^1.3.0",
++        "function-bind": "^1.1.2"
++      },
++      "engines": {
++        "node": ">= 0.4"
++      }
++    },
+     "node_modules/callsites": {
+       "version": "3.1.0",
+       "resolved": "https://registry.npmjs.org/callsites/-/callsites-3.1.0.tgz",
+@@ -2338,6 +2369,18 @@
+       "dev": true,
+       "license": "MIT"
+     },
++    "node_modules/combined-stream": {
++      "version": "1.0.8",
++      "resolved": "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz",
++      "integrity": "sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==",
++      "license": "MIT",
++      "dependencies": {
++        "delayed-stream": "~1.0.0"
++      },
++      "engines": {
++        "node": ">= 0.8"
++      }
++    },
+     "node_modules/comma-separated-tokens": {
+       "version": "2.0.3",
+       "resolved": "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz",
+@@ -2435,6 +2478,15 @@
+       "dev": true,
+       "license": "MIT"
+     },
++    "node_modules/delayed-stream": {
++      "version": "1.0.0",
++      "resolved": "https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz",
++      "integrity": "sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==",
++      "license": "MIT",
++      "engines": {
++        "node": ">=0.4.0"
++      }
++    },
+     "node_modules/detect-libc": {
+       "version": "2.1.2",
+       "resolved": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz",
+@@ -2444,6 +2496,20 @@
+         "node": ">=8"
+       }
+     },
++    "node_modules/dunder-proto": {
++      "version": "1.0.1",
++      "resolved": "https://registry.npmjs.org/dunder-proto/-/dunder-proto-1.0.1.tgz",
++      "integrity": "sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==",
++      "license": "MIT",
++      "dependencies": {
++        "call-bind-apply-helpers": "^1.0.1",
++        "es-errors": "^1.3.0",
++        "gopd": "^1.2.0"
++      },
++      "engines": {
++        "node": ">= 0.4"
++      }
++    },
+     "node_modules/electron-to-chromium": {
+       "version": "1.5.286",
+       "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.286.tgz",
+@@ -2464,6 +2530,51 @@
+         "node": ">=10.13.0"
+       }
+     },
++    "node_modules/es-define-property": {
++      "version": "1.0.1",
++      "resolved": "https://registry.npmjs.org/es-define-property/-/es-define-property-1.0.1.tgz",
++      "integrity": "sha512-e3nRfgfUZ4rNGL232gUgX06QNyyez04KdjFrF+LTRoOXmrOgFKDg4BCdsjW8EnT69eqdYGmRpJwiPVYNrCaW3g==",
++      "license": "MIT",
++      "engines": {
++        "node": ">= 0.4"
++      }
++    },
++    "node_modules/es-errors": {
++      "version": "1.3.0",
++      "resolved": "https://registry.npmjs.org/es-errors/-/es-errors-1.3.0.tgz",
++      "integrity": "sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==",
++      "license": "MIT",
++      "engines": {
++        "node": ">= 0.4"
++      }
++    },
++    "node_modules/es-object-atoms": {
++      "version": "1.1.1",
++      "resolved": "https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.1.1.tgz",
++      "integrity": "sha512-FGgH2h8zKNim9ljj7dankFPcICIK9Cp5bm+c2gQSYePhpaG5+esrLODihIorn+Pe6FGJzWhXQotPv73jTaldXA==",
++      "license": "MIT",
++      "dependencies": {
++        "es-errors": "^1.3.0"
++      },
++      "engines": {
++        "node": ">= 0.4"
++      }
++    },
++    "node_modules/es-set-tostringtag": {
++      "version": "2.1.0",
++      "resolved": "https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz",
++      "integrity": "sha512-j6vWzfrGVfyXxge+O0x5sh6cvxAog0a/4Rdd2K36zCMV5eJ+/+tOAngRO8cODMNWbVRdVlmGZQL2YS3yR8bIUA==",
++      "license": "MIT",
++      "dependencies": {
++        "es-errors": "^1.3.0",
++        "get-intrinsic": "^1.2.6",
++        "has-tostringtag": "^1.0.2",
++        "hasown": "^2.0.2"
++      },
++      "engines": {
++        "node": ">= 0.4"
++      }
++    },
+     "node_modules/esbuild": {
+       "version": "0.27.3",
+       "resolved": "https://registry.npmjs.org/esbuild/-/esbuild-0.27.3.tgz",
+@@ -2817,6 +2928,42 @@
+       "dev": true,
+       "license": "ISC"
+     },
++    "node_modules/follow-redirects": {
++      "version": "1.15.11",
++      "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.11.tgz",
++      "integrity": "sha512-deG2P0JfjrTxl50XGCDyfI97ZGVCxIpfKYmfyrQ54n5FO/0gfIES8C/Psl6kWVDolizcaaxZJnTS0QSMxvnsBQ==",
++      "funding": [
++        {
++          "type": "individual",
++          "url": "https://github.com/sponsors/RubenVerborgh"
++        }
++      ],
++      "license": "MIT",
++      "engines": {
++        "node": ">=4.0"
++      },
++      "peerDependenciesMeta": {
++        "debug": {
++          "optional": true
++        }
++      }
++    },
++    "node_modules/form-data": {
++      "version": "4.0.5",
++      "resolved": "https://registry.npmjs.org/form-data/-/form-data-4.0.5.tgz",
++      "integrity": "sha512-8RipRLol37bNs2bhoV67fiTEvdTrbMUYcFTiy3+wuuOnUog2QBHCZWXDRijWQfAkhBj2Uf5UnVaiWwA5vdd82w==",
++      "license": "MIT",
++      "dependencies": {
++        "asynckit": "^0.4.0",
++        "combined-stream": "^1.0.8",
++        "es-set-tostringtag": "^2.1.0",
++        "hasown": "^2.0.2",
++        "mime-types": "^2.1.12"
++      },
++      "engines": {
++        "node": ">= 6"
++      }
++    },
+     "node_modules/format": {
+       "version": "0.2.2",
+       "resolved": "https://registry.npmjs.org/format/-/format-0.2.2.tgz",
+@@ -2854,6 +3001,15 @@
+         "node": "^8.16.0 || ^10.6.0 || >=11.0.0"
+       }
+     },
++    "node_modules/function-bind": {
++      "version": "1.1.2",
++      "resolved": "https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz",
++      "integrity": "sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==",
++      "license": "MIT",
++      "funding": {
++        "url": "https://github.com/sponsors/ljharb"
++      }
++    },
+     "node_modules/gensync": {
+       "version": "1.0.0-beta.2",
+       "resolved": "https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.2.tgz",
+@@ -2864,6 +3020,43 @@
+         "node": ">=6.9.0"
+       }
+     },
++    "node_modules/get-intrinsic": {
++      "version": "1.3.0",
++      "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.3.0.tgz",
++      "integrity": "sha512-9fSjSaos/fRIVIp+xSJlE6lfwhES7LNtKaCBIamHsjr2na1BiABJPo0mOjjz8GJDURarmCPGqaiVg5mfjb98CQ==",
++      "license": "MIT",
++      "dependencies": {
++        "call-bind-apply-helpers": "^1.0.2",
++        "es-define-property": "^1.0.1",
++        "es-errors": "^1.3.0",
++        "es-object-atoms": "^1.1.1",
++        "function-bind": "^1.1.2",
++        "get-proto": "^1.0.1",
++        "gopd": "^1.2.0",
++        "has-symbols": "^1.1.0",
++        "hasown": "^2.0.2",
++        "math-intrinsics": "^1.1.0"
++      },
++      "engines": {
++        "node": ">= 0.4"
++      },
++      "funding": {
++        "url": "https://github.com/sponsors/ljharb"
++      }
++    },
++    "node_modules/get-proto": {
++      "version": "1.0.1",
++      "resolved": "https://registry.npmjs.org/get-proto/-/get-proto-1.0.1.tgz",
++      "integrity": "sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g==",
++      "license": "MIT",
++      "dependencies": {
++        "dunder-proto": "^1.0.1",
++        "es-object-atoms": "^1.0.0"
++      },
++      "engines": {
++        "node": ">= 0.4"
++      }
++    },
+     "node_modules/glob-parent": {
+       "version": "6.0.2",
+       "resolved": "https://registry.npmjs.org/glob-parent/-/glob-parent-6.0.2.tgz",
+@@ -2890,6 +3083,18 @@
+         "url": "https://github.com/sponsors/sindresorhus"
+       }
+     },
++    "node_modules/gopd": {
++      "version": "1.2.0",
++      "resolved": "https://registry.npmjs.org/gopd/-/gopd-1.2.0.tgz",
++      "integrity": "sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==",
++      "license": "MIT",
++      "engines": {
++        "node": ">= 0.4"
++      },
++      "funding": {
++        "url": "https://github.com/sponsors/ljharb"
++      }
++    },
+     "node_modules/graceful-fs": {
+       "version": "4.2.11",
+       "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz",
+@@ -2906,6 +3111,45 @@
+         "node": ">=8"
+       }
+     },
++    "node_modules/has-symbols": {
++      "version": "1.1.0",
++      "resolved": "https://registry.npmjs.org/has-symbols/-/has-symbols-1.1.0.tgz",
++      "integrity": "sha512-1cDNdwJ2Jaohmb3sg4OmKaMBwuC48sYni5HUw2DvsC8LjGTLK9h+eb1X6RyuOHe4hT0ULCW68iomhjUoKUqlPQ==",
++      "license": "MIT",
++      "engines": {
++        "node": ">= 0.4"
++      },
++      "funding": {
++        "url": "https://github.com/sponsors/ljharb"
++      }
++    },
++    "node_modules/has-tostringtag": {
++      "version": "1.0.2",
++      "resolved": "https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz",
++      "integrity": "sha512-NqADB8VjPFLM2V0VvHUewwwsw0ZWBaIdgo+ieHtK3hasLz4qeCRjYcqfB6AQrBggRKppKF8L52/VqdVsO47Dlw==",
++      "license": "MIT",
++      "dependencies": {
++        "has-symbols": "^1.0.3"
++      },
++      "engines": {
++        "node": ">= 0.4"
++      },
++      "funding": {
++        "url": "https://github.com/sponsors/ljharb"
++      }
++    },
++    "node_modules/hasown": {
++      "version": "2.0.2",
++      "resolved": "https://registry.npmjs.org/hasown/-/hasown-2.0.2.tgz",
++      "integrity": "sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==",
++      "license": "MIT",
++      "dependencies": {
++        "function-bind": "^1.1.2"
++      },
++      "engines": {
++        "node": ">= 0.4"
++      }
++    },
+     "node_modules/hast-util-parse-selector": {
+       "version": "4.0.0",
+       "resolved": "https://registry.npmjs.org/hast-util-parse-selector/-/hast-util-parse-selector-4.0.0.tgz",
+@@ -3484,6 +3728,36 @@
+         "@jridgewell/sourcemap-codec": "^1.5.5"
+       }
+     },
++    "node_modules/math-intrinsics": {
++      "version": "1.1.0",
++      "resolved": "https://registry.npmjs.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz",
++      "integrity": "sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==",
++      "license": "MIT",
++      "engines": {
++        "node": ">= 0.4"
++      }
++    },
++    "node_modules/mime-db": {
++      "version": "1.52.0",
++      "resolved": "https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz",
++      "integrity": "sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==",
++      "license": "MIT",
++      "engines": {
++        "node": ">= 0.6"
++      }
++    },
++    "node_modules/mime-types": {
++      "version": "2.1.35",
++      "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz",
++      "integrity": "sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==",
++      "license": "MIT",
++      "dependencies": {
++        "mime-db": "1.52.0"
++      },
++      "engines": {
++        "node": ">= 0.6"
++      }
++    },
+     "node_modules/minimatch": {
+       "version": "3.1.2",
+       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz",
+@@ -3729,6 +4003,12 @@
+         "url": "https://github.com/sponsors/wooorm"
+       }
+     },
++    "node_modules/proxy-from-env": {
++      "version": "1.1.0",
++      "resolved": "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz",
++      "integrity": "sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==",
++      "license": "MIT"
++    },
+     "node_modules/punycode": {
+       "version": "2.3.1",
+       "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz",
+diff --git a/package.json b/package.json
+index ee4f850..85c03fa 100644
+--- a/package.json
++++ b/package.json
+@@ -11,6 +11,7 @@
+   },
+   "dependencies": {
+     "@tailwindcss/postcss": "^4.1.18",
++    "axios": "^1.13.5",
+     "react": "^19.2.0",
+     "react-dom": "^19.2.0",
+     "react-icons": "^5.5.0",
+diff --git a/src/API/axiosInstance.js b/src/API/axiosInstance.js
+new file mode 100644
+index 0000000..2c31bfd
+--- /dev/null
++++ b/src/API/axiosInstance.js
+@@ -0,0 +1,18 @@
++import axios from "axios";
++
++const instance = axios.create({
++  baseURL: "http://localhost:3600",
++  withCredentials: true,
++  timeout: 100000,
++  headers: { "Content-Type": "application/json" },
++});
++
++axios.interceptors.request.use((config) => {
++  const token = localStorage.getItem("token");
++  if (token) {
++    config.headers.Authorization = `Bearer ${token}`;
++  }
++  return config;
++});
++
++export default instance;
+diff --git a/src/App.tsx b/src/App.tsx
+index 6ef8573..04fe1f5 100644
+--- a/src/App.tsx
++++ b/src/App.tsx
+@@ -1,7 +1,7 @@
+ import Register from "./pages/Register";
+ import { Navbar } from "./components/Navbar";
+ import Footer from "./components/Footer";
+-import AdminPanel from "./components/AdminPanel";
++import AdminPanel from "./pages/AdminPanel";
+ import Login from "./pages/Login";
+ import { Routes, Route } from "react-router";
+ import Landing from "./pages/Landing";
+diff --git a/src/components/AdminPanel.tsx b/src/components/AdminPanel.tsx
+deleted file mode 100644
+index 7698f84..0000000
+--- a/src/components/AdminPanel.tsx
++++ /dev/null
+@@ -1,240 +0,0 @@
+-import { useState } from "react";
+-import { FaSearch } from "react-icons/fa";
+-import { FiUpload } from "react-icons/fi";
+-import { IoDocumentOutline } from "react-icons/io5";
+-
+-interface Document {
+-  id: Number;
+-  name: string;
+-  type: string;
+-  status: string;
+-  size: string;
+-  added: string;
+-}
+-
+-const doc = [
+-  {
+-    id: 1,
+-    name: "Company Overview Q4 2025.pdf",
+-    type: "pdf",
+-    status: "indexed",
+-    size: "2.4 MB",
+-    added: "2026-02-10",
+-  },
+-  {
+-    id: 2,
+-    name: "Product Documentation v3.2.pdf",
+-    type: "pdf",
+-    status: "indexed",
+-    size: "5.1 MB",
+-    added: "2026-02-09",
+-  },
+-  {
+-    id: 3,
+-    name: "FAQ - Customer Support.txt",
+-    type: "txt",
+-    status: "indexed",
+-    size: "124 KB",
+-    added: "2026-02-08",
+-  },
+-  {
+-    id: 4,
+-    name: "https://docs.example.com/api",
+-    type: "csv",
+-    status: "processing",
+-    size: "---",
+-    added: "2026-02-12",
+-  },
+-  {
+-    id: 5,
+-    name: "Pricing & Plans Guide.pdf",
+-    type: "pdf",
+-    status: "indexed",
+-    size: "1.8 MB",
+-    added: "2026-02-07",
+-  },
+-  {
+-    id: 6,
+-    name: "Engineering Onboarding.docx",
+-    type: "pdf",
+-    status: "indexed",
+-    size: "3.2 MB",
+-    added: "2026-02-06",
+-  },
+-];
+-
+-const AdminPanel = () => {
+-  const [documents, setDocuments] = useState<Document[]>(doc);
+-
+-  return (
+-    <div className="relative pt-16">
+-      <header className="px-8 py-4 border-b border-gray-800 flex items-center justify-between gap-4">
+-        <div>
+-          <h1 className="text-xl font-bold tracking-tight">Knowledge Base</h1>
+-          <p className="text-sm mt-1 text-gray-400">
+-            Manage documents and content for the AI chatbot
+-          </p>
+-        </div>
+-        <div className="flex items-center gap-2">
+-          <div className="flex items-center gap-2 px-4 py-3 border-gray-700 border rounded-lg bg-secondary text-sm min-w-[220] focus-within:border-[#2563eb]">
+-            <FaSearch className="inline" />
+-            <input
+-              type="text"
+-              placeholder="Search documents..."
+-              id="searchInput"
+-              className="bg-transparent border-none outline-none w-full text-sm"
+-            />
+-          </div>
+-        </div>
+-      </header>
+-      <label
+-        htmlFor="fileInput"
+-        className="block my-4 mx-5 border-dashed border-2 border-gray-700 rounded-xl px-[48px] py-[32px] text-center cursor-pointer transition-all mb-2 hover:border-[#2563eb] hover:bg-secondary/50"
+-      >
+-        <input
+-          type="file"
+-          multiple
+-          accept=".pdf,.txt,.csv"
+-          id="fileInput"
+-          className="hidden"
+-          onChange={(e) => console.log(e.target.files)} 
+-        />
+-
+-        <span className="w-[65px] h-[65px] mx-auto my-4 bg-[#18181b] border border-gray-800 rounded-lg flex items-center justify-center text-[#a1a1aa]">
+-          <FiUpload size={35} />
+-        </span>
+-
+-        <h3 className="text-base font-semibold mb-2">
+-          Drop files here or click to browse
+-        </h3>
+-
+-        <p className="text-sm text-gray-400">
+-          Upload documents to add to the knowledge base
+-        </p>
+-
+-        <div className="flex items-center justify-center gap-3 mt-4">
+-          {/* Use <div> instead of <span> if these tags shouldn't trigger clicks independently */}
+-          <div className="text-sm font-bold px-3 py-1 rounded-xl bg-[#18181b] border border-gray-800 text-[#a1a1aa]">
+-            PDF
+-          </div>
+-          <div className="text-sm font-bold px-3 py-1 rounded-xl bg-[#18181b] border border-gray-800 text-[#a1a1aa]">
+-            TXT
+-          </div>
+-          <div className="text-sm font-bold px-3 py-1 rounded-xl bg-[#18181b] border border-gray-800 text-[#a1a1aa]">
+-            CSV
+-          </div>
+-        </div>
+-      </label>
+-      <div className="mx-8 mt-4 overflow-hidden rounded-xl border border-gray-800">
+-        <table className="w-full text-left border-collapse">
+-          <thead>
+-            <tr className="border-b border-gray-800 bg-[#18181b]/50">
+-              <th className="px-6 py-4 text-sm font-semibold text-gray-400 w-[40%]">
+-                Document
+-              </th>
+-              <th className="px-6 py-4 text-sm font-semibold text-gray-400">
+-                Type
+-              </th>
+-              <th className="px-6 py-4 text-sm font-semibold text-gray-400">
+-                Status
+-              </th>
+-              <th className="px-6 py-4 text-sm font-semibold text-gray-400">
+-                Added
+-              </th>
+-              <th className="px-6 py-4 text-sm font-semibold text-gray-400 text-right">
+-                Actions
+-              </th>
+-            </tr>
+-          </thead>
+-          <tbody className="divide-y divide-gray-800">
+-            {documents.length === 0 ? (
+-              <tr>
+-                {/* colSpan must match the total number of <th> headers */}
+-                <td colSpan={5} className="py-20">
+-                  <div className="flex flex-col items-center justify-center text-center px-6">
+-                    <span className="w-[65px] h-[65px] mb-4 bg-[#18181b] border border-gray-800 rounded-lg flex items-center justify-center text-[#a1a1aa]">
+-                      <IoDocumentOutline size={30} />
+-                    </span>
+-
+-                    <h3 className="text-base font-semibold mb-2 text-white">
+-                      No documents found
+-                    </h3>
+-
+-                    <p className="text-sm text-gray-400 max-w-xs">
+-                      Upload files, to build your chatbot's knowledge base.
+-                    </p>
+-                  </div>
+-                </td>
+-              </tr>
+-            ) : (
+-              documents.map((doc) => (
+-                <tr
+-                  key={doc.id}
+-                  className="hover:bg-[#18181b]/30 transition-colors"
+-                >
+-                  {/* Document Column */}
+-                  <td className="px-6 py-4">
+-                    <div className="flex items-center gap-4">
+-                      <div
+-                        className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 text-[10px] font-bold border 
+-                ${
+-                  doc.type === "pdf"
+-                    ? "border-red-900/50 text-red-500 bg-red-500/10"
+-                    : doc.type === "txt"
+-                      ? "border-green-900/50 text-green-500 bg-green-500/10"
+-                      : "border-blue-900/50 text-blue-500 bg-blue-500/10"
+-                }`}
+-                      >
+-                        {doc.type.toUpperCase()}
+-                      </div>
+-                      <div className="truncate">
+-                        <div className="font-medium text-sm text-gray-200 truncate max-w-[300px]">
+-                          {doc.name}
+-                        </div>
+-                        <div className="text-xs text-gray-500">{doc.size}</div>
+-                      </div>
+-                    </div>
+-                  </td>
+-
+-                  {/* Type Column */}
+-                  <td className="px-6 py-4">
+-                    <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">
+-                      {doc.type}
+-                    </span>
+-                  </td>
+-
+-                  {/* Status Column */}
+-                  <td className="px-6 py-4">
+-                    <span
+-                      className={`inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-xs font-medium border
+-              ${doc.status === "indexed" ? "bg-emerald-500/10 text-emerald-500 border-emerald-500/20" : "bg-amber-500/10 text-amber-500 border-amber-500/20"}`}
+-                    >
+-                      <span
+-                        className={`w-1.5 h-1.5 rounded-full ${doc.status === "indexed" ? "bg-emerald-500" : "bg-amber-500"} animate-pulse`}
+-                      ></span>
+-                      {doc.status.charAt(0).toUpperCase() + doc.status.slice(1)}
+-                    </span>
+-                  </td>
+-
+-                  {/* Date Column */}
+-                  <td className="px-6 py-4 text-sm text-gray-500">
+-                    {doc.added}
+-                  </td>
+-
+-                  {/* Actions Column */}
+-                  <td className="px-6 py-4 text-right">
+-                    <button className="text-gray-500 hover:text-white transition-colors">
+-                      <i data-lucide="more-vertical" className="w-5 h-5"></i>
+-                    </button>
+-                  </td>
+-                </tr>
+-              ))
+-            )}
+-          </tbody>
+-        </table>
+-      </div>
+-    </div>
+-  );
+-};
+-
+-export default AdminPanel;
+diff --git a/src/components/ChatBot.tsx b/src/components/ChatBot.tsx
+index 6c3d20b..81265ac 100644
+--- a/src/components/ChatBot.tsx
++++ b/src/components/ChatBot.tsx
+@@ -1,21 +1,13 @@
+-import { useEffect, useRef, useState } from "react";
++import { useEffect, useState } from "react";
+ import { IoClose } from "react-icons/io5";
+-import { FiMessageCircle } from "react-icons/fi";
+-import { FiSend } from "react-icons/fi";
+-
+-function getBotResponse(input: string): string {
+-  return "nothing";
+-}
+-
+-interface ChatMessage {
+-  id: number;
+-  sender: "user" | "bot";
+-  text: string;
+-}
++import { FiMessageCircle, FiSend } from "react-icons/fi";
++import { sendChatMessage } from "../services/chatService"; // your API service
+ 
+ const ChatBot = () => {
+   const [isOpen, setIsOpen] = useState(true);
+-  const [messages, setMessages] = useState<ChatMessage[]>([
++  const [input, setInput] = useState("");
++  const [loading, setLoading] = useState(false);
++  const [messages, setMessages] = useState([
+     {
+       id: 0,
+       sender: "bot",
+@@ -23,52 +15,63 @@ const ChatBot = () => {
+     },
+   ]);
+ 
+-  const [input, setInput] = useState("");
+-  const messagesEndRef = useRef<HTMLDivElement>(null);
+-  const inputRef = useRef<HTMLInputElement>(null);
++  const [lastMessageId, setLastMessageId] = useState(0); // for scroll tracking
+ 
++  // Scroll to bottom when messages change
+   useEffect(() => {
+-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+-  }, [messages]);
++    const chatContainer = document.getElementById("chat-messages");
++    if (chatContainer) {
++      chatContainer.scrollTop = chatContainer.scrollHeight;
++    }
++  }, [messages, lastMessageId]);
+ 
++  // Focus input when chat opens
+   useEffect(() => {
+     if (isOpen) {
+-      setTimeout(() => inputRef.current?.focus(), 300);
++      setTimeout(() => {
++        const inputEl = document.getElementById("chat-input");
++        inputEl?.focus();
++      }, 300);
+     }
+   }, [isOpen]);
+ 
+-  function handleSend() {
+-    const trimmed = input.trim();
+-    if (!trimmed) return;
++  const handleSend = async (e) => {
++    e.preventDefault();
++    const text = input.trim();
++    if (!text || loading) return;
+ 
+-    const userMsg: ChatMessage = {
+-      id: Date.now(),
+-      sender: "user",
+-      text: trimmed,
+-    };
+-    
+-    setMessages((prev) => [...prev, userMsg]);
++    const userMessage = { id: Date.now(), sender: "user", text };
++    setMessages((prev) => [...prev, userMessage]);
+     setInput("");
++    setLoading(true);
+ 
+-    setTimeout(() => {
+-      const botMsg: ChatMessage = {
++    try {
++      const response = await sendChatMessage(text);
++      const botMessage = {
+         id: Date.now() + 1,
+         sender: "bot",
+-        text: getBotResponse(trimmed),
++        text: response || "I don't have an answer right now.",
+       };
+-      setMessages((prev) => [...prev, botMsg]);
+-    }, 500);
+-  }
+-
+-  function handleKeyDown(e: React.KeyboardEvent) {
+-    if (e.key === "Enter") {
+-      e.preventDefault();
+-      handleSend();
++      setMessages((prev) => [...prev, botMessage]);
++      setLastMessageId(botMessage.id);
++    } catch (err) {
++      console.log(err)
++      setMessages((prev) => [
++        ...prev,
++        { id: Date.now() + 2, sender: "bot", text: "Something went wrong." },
++      ]);
++    } finally {
++      setLoading(false);
+     }
+-  }
++  };
++
++  const handleKeyDown = (e) => {
++    if (e.key === "Enter") handleSend(e);
++  };
+ 
+   return (
+     <>
++      {/* CHAT WINDOW */}
+       <div
+         className={`fixed bottom-24 right-6 z-50 flex w-[360px] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-2xl transition-all duration-300 ${
+           isOpen
+@@ -77,6 +80,7 @@ const ChatBot = () => {
+         }`}
+         style={{ height: "480px" }}
+       >
++        {/* HEADER */}
+         <div className="flex items-center justify-between border-b border-border bg-secondary px-5 py-4">
+           <div className="flex items-center gap-3">
+             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-mono text-xs font-bold">
+@@ -96,12 +100,19 @@ const ChatBot = () => {
+             <IoClose className="h-5 w-5" />
+           </button>
+         </div>
+-        <div className="flex-1 overflow-y-auto px-4 py-4">
++
++        {/* MESSAGES */}
++        <div
++          id="chat-messages"
++          className="flex-1 overflow-y-auto px-4 py-4 bg-[#101317]"
++        >
+           <div className="flex flex-col gap-3">
+             {messages.map((msg) => (
+               <div
+                 key={msg.id}
+-                className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}
++                className={`flex ${
++                  msg.sender === "user" ? "justify-end" : "justify-start"
++                }`}
+               >
+                 <div
+                   className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
+@@ -114,13 +125,22 @@ const ChatBot = () => {
+                 </div>
+               </div>
+             ))}
+-            <div ref={messagesEndRef} />
++            {loading && (
++              <div className="text-sm text-gray-400 italic">
++                Assistant is typing...
++              </div>
++            )}
+           </div>
+         </div>
+-        <div className="border-t border-border bg-secondary px-4 py-3">
++
++        {/* INPUT */}
++        <form
++          onSubmit={handleSend}
++          className="border-t border-border bg-secondary px-4 py-3"
++        >
+           <div className="flex items-center gap-2">
+             <input
+-              ref={inputRef}
++              id="chat-input"
+               type="text"
+               value={input}
+               onChange={(e) => setInput(e.target.value)}
+@@ -129,20 +149,21 @@ const ChatBot = () => {
+               className="flex-1 rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder-muted-foreground outline-none transition-colors focus:border-primary"
+             />
+             <button
+-              onClick={handleSend}
+-              disabled={!input.trim()}
++              type="submit"
++              disabled={!input.trim() || loading}
+               className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-all duration-200 hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed"
+-              aria-label="Send message"
+             >
+               <FiSend className="h-4 w-4" />
+             </button>
+           </div>
+-        </div>
++        </form>
+       </div>
++
++      {/* FLOATING BUTTON */}
+       <button
+         onClick={() => setIsOpen(!isOpen)}
+         className={`fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:brightness-110 ${
+-          isOpen ? "rotate-0 scale-90" : "rotate-0 scale-100"
++          isOpen ? "scale-90" : "scale-100"
+         }`}
+       >
+         {isOpen ? (
+diff --git a/src/pages/Admin.tsx b/src/context/ApiContext.js
+similarity index 100%
+rename from src/pages/Admin.tsx
+rename to src/context/ApiContext.js
+diff --git a/src/pages/AdminPanel.tsx b/src/pages/AdminPanel.tsx
+new file mode 100644
+index 0000000..7d0ccc6
+--- /dev/null
++++ b/src/pages/AdminPanel.tsx
+@@ -0,0 +1,223 @@
++import { useState, useEffect } from "react";
++import { FaSearch } from "react-icons/fa";
++import { FiUpload } from "react-icons/fi";
++import { IoDocumentOutline } from "react-icons/io5";
++import { getDocuments, uploadDocuments } from "../services/documentService";
++
++const AdminPanel = () => {
++  const [documents, setDocuments] = useState([]);
++  const [stagedFiles, setStagedFiles] = useState([]); // new files
++  const [loading, setLoading] = useState(false);
++
++  useEffect(() => {
++    fetchDocuments();
++  }, []);
++
++  const fetchDocuments = async () => {
++    try {
++      setLoading(true);
++      const data = await getDocuments();
++      setDocuments(data);
++    } catch (err) {
++      console.error(err);
++    } finally {
++      setLoading(false);
++    }
++  };
++
++  // ? when file uploaad
++
++  const handleFileChange = (e) => {
++    const files = Array.from(e.target.files);
++    if (!files.length) return;
++
++    const staged = files.map((file, idx) => ({
++      id: Date.now() + idx,
++      name: file.name,
++      type: file.name.split(".").pop(),
++      status: "pending",
++      fileObject: file,
++    }));
++
++    setStagedFiles((prev) => [...staged, ...prev]);
++  };
++
++  // Submit all staged files
++  const handleSubmitAll = async () => {
++    if (!stagedFiles.length) return;
++    setLoading(true);
++
++    try {
++      console.log("before submitting");
++      const uploaded = await uploadDocuments(stagedFiles);
++      setDocuments((prev) => [...stagedFiles, ...prev]);
++      setStagedFiles([]);
++    } catch (err) {
++      console.error("Upload failed", err);
++    } finally {
++      setLoading(false);
++    }
++  };
++
++  return (
++    <div className="relative pt-16 px-8 text-white">
++      <header className="flex justify-between items-center border-b border-gray-800 pb-4 mb-6">
++        <div>
++          <h1 className="text-2xl font-bold tracking-tight">Knowledge Base</h1>
++          <p className="text-sm text-gray-400 mt-1">
++            Manage documents and content for the AI chatbot
++          </p>
++        </div>
++        <div className="flex items-center gap-2">
++          <div className="flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-lg bg-[#151f2e] text-sm min-w-[220px] focus-within:border-blue-600">
++            <FaSearch />
++            <input
++              type="text"
++              placeholder="Search documents..."
++              className="bg-transparent border-none outline-none w-full text-sm ml-2"
++            />
++          </div>
++        </div>
++      </header>
++
++      {/* File Upload */}
++      <label
++        htmlFor="fileInput"
++        className="block my-4 border-dashed border-2 border-gray-700 rounded-xl px-12 py-8 text-center cursor-pointer hover:border-blue-600 hover:bg-[#151f2e]/50 transition"
++      >
++        <input
++          type="file"
++          multiple
++          accept=".pdf,.txt,.csv"
++          id="fileInput"
++          className="hidden"
++          onChange={handleFileChange}
++        />
++        <div className="w-16 h-16 mx-auto mb-4 bg-[#18181b] border border-gray-800 rounded-lg flex items-center justify-center text-gray-400">
++          <FiUpload size={35} />
++        </div>
++        <h3 className="text-base font-semibold mb-2">
++          Drop files here or click to browse
++        </h3>
++        <p className="text-sm text-gray-400 mb-4">
++          Upload documents to add to the knowledge base
++        </p>
++      </label>
++
++      {/* Submit all staged files button */}
++      {stagedFiles.length > 0 && (
++        <div className="mb-4 flex justify-end">
++          <button
++            onClick={handleSubmitAll}
++            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-md text-white font-medium"
++          >
++            Submit All ({stagedFiles.length})
++          </button>
++        </div>
++      )}
++
++      <div className="overflow-hidden rounded-xl border border-gray-800">
++        <table className="w-full text-left border-collapse">
++          <thead className="bg-[#18181b]/50 text-gray-400">
++            <tr>
++              <th className="px-6 py-4 text-sm font-semibold w-[40%]">
++                Document
++              </th>
++              <th className="px-6 py-4 text-sm font-semibold">Type</th>
++              <th className="px-6 py-4 text-sm font-semibold">Status</th>
++              <th className="px-6 py-4 text-sm font-semibold">Added</th>
++              <th className="px-6 py-4 text-sm font-semibold text-right">
++                Actions
++              </th>
++            </tr>
++          </thead>
++          <tbody className="divide-y divide-gray-800">
++            {loading ? (
++              <tr>
++                <td colSpan={5} className="py-10 text-center text-gray-400">
++                  Loading...
++                </td>
++              </tr>
++            ) : stagedFiles.length + documents.length === 0 ? (
++              <tr>
++                <td colSpan={5} className="py-20 text-center text-gray-400">
++                  <IoDocumentOutline className="mx-auto mb-4" size={40} />
++                  <div className="font-semibold mb-1 text-white">
++                    No documents found
++                  </div>
++                  <div className="text-sm">
++                    Upload files to build your chatbot's knowledge base.
++                  </div>
++                </td>
++              </tr>
++            ) : (
++              [...stagedFiles, ...documents].map((doc) => (
++                <tr
++                  key={doc.id}
++                  className="hover:bg-[#18181b]/30 transition-colors"
++                >
++                  <td className="px-6 py-4">
++                    <div className="flex items-center gap-4">
++                      <div
++                        className={`w-9 h-9 rounded-lg flex items-center justify-center text-[10px] font-bold border ${
++                          doc.type === "pdf"
++                            ? "border-red-900/50 text-red-500 bg-red-500/10"
++                            : doc.type === "txt"
++                              ? "border-green-900/50 text-green-500 bg-green-500/10"
++                              : "border-blue-900/50 text-blue-500 bg-blue-500/10"
++                        }`}
++                      >
++                        {doc.type.toUpperCase()}
++                      </div>
++                      <div className="truncate">
++                        <div className="font-medium text-sm text-gray-200">
++                          {doc.name}
++                        </div>
++                        <div className="text-xs text-gray-500">{doc.size}</div>
++                      </div>
++                    </div>
++                  </td>
++                  <td className="px-6 py-4 text-xs text-gray-400 font-medium uppercase">
++                    {doc.type}
++                  </td>
++                  <td className="px-6 py-4">
++                    <span
++                      className={`inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-xs font-medium border ${
++                        doc.status === "indexed"
++                          ? "bg-emerald-500/10 text-emerald-500 border-emerald-500/20"
++                          : doc.status === "pending"
++                            ? "bg-yellow-500/10 text-yellow-500 border-yellow-500/20"
++                            : "bg-amber-500/10 text-amber-500 border-amber-500/20"
++                      }`}
++                    >
++                      <span
++                        className={`w-1.5 h-1.5 rounded-full ${
++                          doc.status === "indexed"
++                            ? "bg-emerald-500"
++                            : doc.status === "pending"
++                              ? "bg-yellow-500"
++                              : "bg-amber-500"
++                        } animate-pulse`}
++                      ></span>
++                      {doc.status.charAt(0).toUpperCase() + doc.status.slice(1)}
++                    </span>
++                  </td>
++                  <td className="px-6 py-4 text-sm text-gray-500">
++                    {doc.added || "-"}
++                  </td>
++                  <td className="px-6 py-4 text-right">
++                    <button className="text-gray-500 hover:text-white">
++                      ⋮
++                    </button>
++                  </td>
++                </tr>
++              ))
++            )}
++          </tbody>
++        </table>
++      </div>
++    </div>
++  );
++};
++
++export default AdminPanel;
+diff --git a/src/pages/Login.tsx b/src/pages/Login.tsx
+index 0098f32..e25b05f 100644
+--- a/src/pages/Login.tsx
++++ b/src/pages/Login.tsx
+@@ -1,107 +1,105 @@
+ import { useState } from "react";
+-import Logo from "../assets/logo.png";
+-import { FaGoogle } from "react-icons/fa";
+-import { FaArrowRight } from "react-icons/fa";
+-import { FaEye } from "react-icons/fa";
+-import { FaEyeSlash } from "react-icons/fa";
+ import { Link } from "react-router";
++import Logo from "../assets/logo.png";
++import { FaGoogle, FaArrowRight, FaEye, FaEyeSlash } from "react-icons/fa";
++import { submitLogin } from "../services/auth.service.js";
++import { useNavigate } from "react-router";
+ 
+ const Login = () => {
+-  const [show, setShow] = useState(true);
+-
++  const [showPassword, setShowPassword] = useState(true);
++  const [email, setEmail] = useState("");
++  const [password, setPassword] = useState("");
++  const [error, setErrors] = useState("");
++  const navigate = useNavigate();
++  const handleLogin = async (event) => {
++    event.preventDefault();
++    const formData = {
++      email: email,
++      password: password,
++    };
++    try {
++      const response = await submitLogin(formData);
++      console.log(response);
++      if (response.success == true) {
++        navigate("/");
++      }
++    } catch (error) {
++      setErrors("something went wrong");
++    }
++  };
+   return (
+-    <div className="w-120 mx-auto text-white">
+-      <div className="h-210 flex flex-col items-center">
+-        <img src={Logo} className="w-40 pt-10" />
+-        <div
+-          style={{ backgroundColor: "#151f2e" }}
+-          className="my-8 p-10 rounded-lg w-full"
+-        >
+-          <h1 className="text-2xl font-medium font-sans mb-5">
+-            Sign in to PipedPiper
+-          </h1>
+-          <form>
+-            <div>
+-              <label htmlFor="email" className="block text-gray-400 mb-2">
+-                Email
+-              </label>
++    <div className="max-w-md mx-auto text-white mt-10">
++      <img src={Logo} className="w-40 mx-auto mb-6" />
++
++      <div className="bg-[#151f2e] p-6 rounded-md">
++        <h1 className="text-2xl font-medium mb-4">Sign in to PipedPiper</h1>
++        <form className="space-y-4">
++          <div>
++            <label className="block text-gray-400 mb-1">Email</label>
++            <input
++              type="email"
++              className="w-full px-3 py-2 rounded bg-[#242f40] outline-none"
++              value={email}
++              onChange={(e) => setEmail(e.target.value)}
++            />
++          </div>
++
++          <div>
++            <label className="block text-gray-400 mb-1">Password</label>
++            <div className="flex items-center bg-[#242f40] rounded">
+               <input
+-                id="id"
+-                type="email"
+-                className="bg-[#242f40] w-full px-4 py-2 outline-0 rounded-xs"
++                type={showPassword ? "password" : "text"}
++                className="flex-1 px-3 py-2 bg-[#242f40] outline-none rounded-l"
++                onChange={(e) => setPassword(e.target.value)}
+               />
+-            </div>
+-            <div>
+-              <label
+-                htmlFor="password"
+-                className="block text-gray-400 mb-2 mt-4"
++              <button
++                type="button"
++                onClick={() => setShowPassword(!showPassword)}
++                className="px-2"
++                value={password}
+               >
+-                password
+-              </label>
+-              <span className="flex items-center bg-[#242f40] pr-4">
+-                <input
+-                  id="password"
+-                  type={show ? "password" : "text"}
+-                  className="bg-[#242f40] w-full px-4 py-2 outline-0 rounded-xs"
+-                />
+-                <button
+-                  onClick={() => setShow(!show)}
+-                  className="cursor-pointer"
+-                >
+-                  {show ? <FaEyeSlash /> : <FaEye />}
+-                </button>
+-              </span>
++                {showPassword ? <FaEyeSlash /> : <FaEye />}
++              </button>
+             </div>
+-            <button className="bg-[#37cc37] w-full px-4 py-2 outline-0 rounded-md mt-5 mb-3 text-black font-medium font-sans cursor-pointer hover:opacity-80">
+-              Sign up
+-            </button>
+-          </form>
+-          <div className="text-gray-400 mt-5 hover:text-[#37cc37] cursor-pointer">
+-            <a>Forgot Password?</a>
+           </div>
+-          <div className="flex items-center my-4">
+-            <div className="grow border-t border-gray-600"></div>
+-            <span className="mx-4 text-gray-500 font-medium">or</span>
+-            <div className="grow border-t border-gray-600"></div>
+-          </div>
+-          <button className="w-full outline-1 outline-gray-500 py-2 font-medium rounded-medium mb-4 hover:bg-gray-800">
+-            <FaGoogle className="inline mx-1" size={20} />
+-            Sign up with Google
++
++          <button
++            className="w-full py-2 bg-green-500 text-black rounded hover:opacity-80"
++            onClick={handleLogin}
++          >
++            Sign In
+           </button>
+-          <div className="flex items-center gap-1 mt-5">
+-            <span className="text-gray-400">New to PipedPiper?</span>
++        </form>
+ 
+-            <Link
+-              to="/signup"
+-              className="group text-[#37cc37] flex items-center gap-1"
+-            >
+-              Create Account
+-              <FaArrowRight
+-                size={10}
+-                className="transition-transform duration-300 group-hover:translate-x-1"
+-              />
+-            </Link>
+-          </div>
++        <div className="text-sm text-gray-400 mt-2 cursor-pointer hover:text-green-500">
++          Forgot Password?
++        </div>
++
++        <div className="flex items-center my-3">
++          <div className="flex-1 border-t border-gray-600"></div>
++          <span className="mx-2 text-gray-400">or</span>
++          <div className="flex-1 border-t border-gray-600"></div>
++        </div>
++
++        <button className="w-full py-2 border border-gray-500 rounded hover:bg-gray-800 flex items-center justify-center gap-2">
++          <FaGoogle size={18} /> Sign in with Google
++        </button>
++
++        <div className="text-sm text-gray-400 mt-4">
++          New to PipedPiper?{" "}
++          <Link to="/signup" className="text-green-500 flex items-center gap-1">
++            Create Account <FaArrowRight size={12} />
++          </Link>
+         </div>
+       </div>
+-      <div className="text-gray-400 flex flex-col items-center text-xs">
+-        <h2>
+-          Copyright © 2026{" "}
+-          <a href="#" className="underline hover:text-[#37cc37]">
+-            PiedPiper
+-          </a>
+-        </h2>
+-        <h2 className="my-1">
+-          All Rights Reserved.{" "}
+-          <a href="#" className="underline hover:text-[#37cc37]">
+-            User Agreement
+-          </a>
+-          ,{" "}
+-          <a href="#" className="underline hover:text-[#37cc37]">
+-            Privacy Notice
+-          </a>
+-        </h2>
+-      </div>
++
++      <footer className="text-gray-400 text-xs text-center mt-6">
++        © 2026{" "}
++        <a href="#" className="underline hover:text-green-500">
++          PiedPiper
++        </a>{" "}
++        | All Rights Reserved
++      </footer>
+     </div>
+   );
+ };
+diff --git a/src/pages/Register.tsx b/src/pages/Register.tsx
+index 5aeda31..ec6e8ae 100644
+--- a/src/pages/Register.tsx
++++ b/src/pages/Register.tsx
+@@ -1,106 +1,107 @@
+ import { useState } from "react";
+-import Logo from "../assets/logo.png";
+-import { FaGoogle } from "react-icons/fa";
+-import { FaArrowRight } from "react-icons/fa";
+-import { FaEye } from "react-icons/fa";
+-import { FaEyeSlash } from "react-icons/fa";
+ import { Link } from "react-router";
++import Logo from "../assets/logo.png";
++import { FaGoogle, FaArrowRight, FaEye, FaEyeSlash } from "react-icons/fa";
++import { submitRegister } from "./../services/auth.service.js";
++import { useNavigate } from "react-router";
+ 
+ const Register = () => {
+-  const [show, setShow] = useState(true);
++  const [showPassword, setShowPassword] = useState(true);
++  const [email, setEmail] = useState("");
++  const [password, setPassword] = useState("");
++  const [error, setErrors] = useState("");
++  const [message, setMessage] = useState("");
++  const navigate = useNavigate();
+ 
++  const handleRegister = async (event) => {
++    event.preventDefault();
++    const formData = {
++      email: email,
++      password: password,
++    };
++    try {
++      const response = await submitRegister(formData);
++      if (response?.success == true) {
++        setMessage(response?.message);
++        navigate("/login");
++      } else {
++        setMessage("something went wrong");
++      }
++    } catch (error) {
++      setErrors("something went wrong");
++    }
++  };
+   return (
+-    <div className="w-120 mx-auto text-white">
+-      <div className="h-200 flex flex-col items-center">
+-        <img src={Logo} className="w-40 pt-10" />
+-        <div
+-          style={{ backgroundColor: "#151f2e" }}
+-          className="my-8 p-10 rounded-lg w-full"
+-        >
+-          <h1 className="text-2xl font-medium font-sans mb-5">
+-            Create a PipedPiper account
+-          </h1>
+-          <form>
+-            <div>
+-              <label htmlFor="email" className="block text-gray-400 mb-2">
+-                Email
+-              </label>
++    <div className="max-w-md mx-auto text-white mt-10">
++      <img src={Logo} className="w-40 mx-auto mb-6" />
++
++      <div className="bg-[#151f2e] p-6 rounded-md">
++        <h1 className="text-2xl font-medium mb-4">
++          Create a PipedPiper account
++        </h1>
++        <form className="space-y-4">
++          <div>
++            <label className="block text-gray-400 mb-1">Email</label>
++            <input
++              type="email"
++              className="w-full px-3 py-2 rounded bg-[#242f40] outline-none"
++              value={email}
++              onChange={(e) => setEmail(e.target.value)}
++            />
++          </div>
++
++          <div>
++            <label className="block text-gray-400 mb-1">Password</label>
++            <div className="flex items-center bg-[#242f40] rounded">
+               <input
+-                id="id"
+-                type="email"
+-                className="bg-[#242f40] w-full px-4 py-2 outline-0 rounded-xs"
++                type={showPassword ? "password" : "text"}
++                className="flex-1 px-3 py-2 bg-[#242f40] outline-none rounded-l"
++                value={password}
++                onChange={(e) => setPassword(e.target.value)}
+               />
+-            </div>
+-            <div>
+-              <label
+-                htmlFor="password"
+-                className="block text-gray-400 mb-2 mt-4"
++              <button
++                type="button"
++                onClick={() => setShowPassword(!showPassword)}
++                className="px-2"
+               >
+-                password
+-              </label>
+-              <span className="flex items-center bg-[#242f40] pr-4">
+-                <input
+-                  id="password"
+-                  type={show ? "password" : "text"}
+-                  className="bg-[#242f40] w-full px-4 py-2 outline-0 rounded-xs"
+-                />
+-                <button
+-                  onClick={() => setShow(!show)}
+-                  className="cursor-pointer"
+-                >
+-                  {show ? <FaEyeSlash /> : <FaEye />}
+-                </button>
+-              </span>
++                {showPassword ? <FaEyeSlash /> : <FaEye />}
++              </button>
+             </div>
+-            <button className="bg-[#37cc37] w-full px-4 py-2 outline-0 rounded-md mt-5 mb-3 text-black font-medium font-sans cursor-pointer hover:opacity-80">
+-              Sign up
+-            </button>
+-          </form>
+-          <div className="flex items-center my-4">
+-            <div className="grow border-t border-gray-600"></div>
+-            <span className="mx-4 text-gray-500 font-medium">or</span>
+-            <div className="grow border-t border-gray-600"></div>
+           </div>
+-          <button className="w-full outline-1 outline-gray-500 py-2 font-medium rounded-medium mb-4 hover:bg-gray-800">
+-            <FaGoogle className="inline mx-1" size={20} />
+-            Sign up with Google
++
++          <button
++            className="w-full py-2 bg-green-500 text-black rounded hover:opacity-80"
++            onClick={handleRegister}
++          >
++            Sign Up
+           </button>
+-          <div className="flex items-center gap-1 mt-5">
+-            <span className="text-gray-400">
+-              Already have a PipedPiper account?
+-            </span>
++        </form>
+ 
+-            <Link
+-              to="/login"
+-              className="group text-[#37cc37] flex items-center gap-1"
+-            >
+-              Sign In
+-              <FaArrowRight
+-                size={10}
+-                className="transition-transform duration-300 group-hover:translate-x-1"
+-              />
+-            </Link>
+-          </div>
++        <div className="flex items-center my-3">
++          <div className="flex-1 border-t border-gray-600"></div>
++          <span className="mx-2 text-gray-400">or</span>
++          <div className="flex-1 border-t border-gray-600"></div>
++        </div>
++
++        <button className="w-full py-2 border border-gray-500 rounded hover:bg-gray-800 flex items-center justify-center gap-2">
++          <FaGoogle size={18} /> Sign up with Google
++        </button>
++
++        <div className="text-sm text-gray-400 mt-4">
++          Already have an account?{" "}
++          <Link to="/login" className="text-green-500 flex items-center gap-1">
++            Sign In <FaArrowRight size={12} />
++          </Link>
+         </div>
+       </div>
+-      <div className="text-gray-400 flex flex-col items-center text-xs">
+-        <h2>
+-          Copyright © 2026{" "}
+-          <a href="#" className="underline hover:text-[#37cc37]">
+-            PiedPiper
+-          </a>
+-        </h2>
+-        <h2 className="my-1">
+-          All Rights Reserved.{" "}
+-          <a href="#" className="underline hover:text-[#37cc37]">
+-            User Agreement
+-          </a>
+-          ,{" "}
+-          <a href="#" className="underline hover:text-[#37cc37]">
+-            Privacy Notice
+-          </a>
+-        </h2>
+-      </div>
++
++      <footer className="text-gray-400 text-xs text-center mt-6">
++        © 2026{" "}
++        <a href="#" className="underline hover:text-green-500">
++          PiedPiper
++        </a>{" "}
++        | All Rights Reserved
++      </footer>
+     </div>
+   );
+ };
+diff --git a/src/services/auth.service.js b/src/services/auth.service.js
+new file mode 100644
+index 0000000..8cf7af1
+--- /dev/null
++++ b/src/services/auth.service.js
+@@ -0,0 +1,20 @@
++import axiosAPI from "../API/axiosInstance";
++
++export const submitLogin = async (params) => {
++  try {
++    const response = await axiosAPI.post("/auth/login", params);
++    return response.data;
++  } catch (error) {
++    return error.response.data;
++  }
++};
++
++export const submitRegister = async (params) => {
++  try {
++    const response = await axiosAPI.post("/auth/register", params);
++    localStorage.setItem("token", response?.data?.accessToken);
++    return response.data;
++  } catch (error) {
++    return error.response.data;
++  }
++};
+diff --git a/src/services/chatService.js b/src/services/chatService.js
+new file mode 100644
+index 0000000..8145266
+--- /dev/null
++++ b/src/services/chatService.js
+@@ -0,0 +1,15 @@
++import instance from "./../API/axiosInstance";
++
++export async function sendChatMessage(messages) {
++  // messages = [{ role: "user"|"assistant", content: "..." }, ...]
++  try {
++    const response = await instance.post("/chat/query", { question: messages });
++    console.log("this is amazing");
++
++    console.log(response);
++    return response.data.answer;
++  } catch (err) {
++    console.error("Chat API error:", err);
++    throw err;
++  }
++}
+diff --git a/src/services/documentService.js b/src/services/documentService.js
+new file mode 100644
+index 0000000..d3e3cde
+--- /dev/null
++++ b/src/services/documentService.js
+@@ -0,0 +1,16 @@
++import axiosInstance from "./../API/axiosInstance";
++
++export const getDocuments = async () => {
++  const response = await axiosInstance.get("/documents");
++  return response.data;
++};
++
++export const uploadDocuments = async (stagedFiles) => {
++  const formData = new FormData();
++  stagedFiles.forEach((f) => formData.append("files", f.fileObject));
++
++  const response = await axiosInstance.post("/admin/upload", formData, {
++    headers: { "Content-Type": "multipart/form-data" },
++  });
++  return response.data;
++};
+diff --git a/tsconfig.app.json b/tsconfig.app.json
+deleted file mode 100644
+index a9b5a59..0000000
+--- a/tsconfig.app.json
++++ /dev/null
+@@ -1,28 +0,0 @@
+-{
+-  "compilerOptions": {
+-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+-    "target": "ES2022",
+-    "useDefineForClassFields": true,
+-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+-    "module": "ESNext",
+-    "types": ["vite/client"],
+-    "skipLibCheck": true,
+-
+-    /* Bundler mode */
+-    "moduleResolution": "bundler",
+-    "allowImportingTsExtensions": true,
+-    "verbatimModuleSyntax": true,
+-    "moduleDetection": "force",
+-    "noEmit": true,
+-    "jsx": "react-jsx",
+-
+-    /* Linting */
+-    "strict": true,
+-    "noUnusedLocals": true,
+-    "noUnusedParameters": true,
+-    "erasableSyntaxOnly": true,
+-    "noFallthroughCasesInSwitch": true,
+-    "noUncheckedSideEffectImports": true
+-  },
+-  "include": ["src"]
+-}
+diff --git a/tsconfig.json b/tsconfig.json
+deleted file mode 100644
+index 1ffef60..0000000
+--- a/tsconfig.json
++++ /dev/null
+@@ -1,7 +0,0 @@
+-{
+-  "files": [],
+-  "references": [
+-    { "path": "./tsconfig.app.json" },
+-    { "path": "./tsconfig.node.json" }
+-  ]
+-}
+diff --git a/tsconfig.node.json b/tsconfig.node.json
+deleted file mode 100644
+index 8a67f62..0000000
+--- a/tsconfig.node.json
++++ /dev/null
+@@ -1,26 +0,0 @@
+-{
+-  "compilerOptions": {
+-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+-    "target": "ES2023",
+-    "lib": ["ES2023"],
+-    "module": "ESNext",
+-    "types": ["node"],
+-    "skipLibCheck": true,
+-
+-    /* Bundler mode */
+-    "moduleResolution": "bundler",
+-    "allowImportingTsExtensions": true,
+-    "verbatimModuleSyntax": true,
+-    "moduleDetection": "force",
+-    "noEmit": true,
+-
+-    /* Linting */
+-    "strict": true,
+-    "noUnusedLocals": true,
+-    "noUnusedParameters": true,
+-    "erasableSyntaxOnly": true,
+-    "noFallthroughCasesInSwitch": true,
+-    "noUncheckedSideEffectImports": true
+-  },
+-  "include": ["vite.config.ts"]
+-}
