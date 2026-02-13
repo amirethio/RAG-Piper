@@ -2,14 +2,10 @@ import { VoyageAIClient } from "voyageai";
 import { GoogleGenAI } from "@google/genai";
 import { Document } from "./../../models/Document.model.js";
 
-
-
-
 const VOYAGE_API_KEY = process.env.VOYAGE_API_KEY;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const client = new VoyageAIClient({ apiKey: VOYAGE_API_KEY });
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-
 
 export const chatService = async (question) => {
   try {

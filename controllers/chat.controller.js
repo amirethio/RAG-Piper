@@ -3,7 +3,6 @@ import { chatService } from "./../services/chat/chat.service.js";
 export const askQuestion = async (req, res) => {
   try {
     const { question } = req.body;
-
     if (!question || question.trim() === "") {
       return res.status(400).json({
         success: false,

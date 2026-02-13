@@ -1,10 +1,9 @@
 import express from "express";
-import { chatService } from "../services/chat/chat.service.js";
-
+import { askQuestion } from "../controllers/chat.controller.js";
 
 const router = express.Router();
 
 //* ROUTES
-router.post("/query", chatService);
+router.post("/query", askQuestion);
 
 export default router;
