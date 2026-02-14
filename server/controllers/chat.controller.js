@@ -5,9 +5,6 @@ export const askQuestion = async (req, res) => {
     const { question } = req.body;
     const { id } = req.user;
 
-    console.log("user id new");
-    console.log(id);
-
     if (!question || question.trim() === "") {
       return res.status(400).json({
         success: false,

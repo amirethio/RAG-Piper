@@ -37,7 +37,7 @@ export const loginUser = async ({ email, password }) => {
   }
 
   // find user in MongoDB
-  const user = await User.findOne({ email }).select("+password");
+  const user = await User.findOne({ email , }).select("+password");
   if (!user) {
     throw new Error("User not found");
   }
