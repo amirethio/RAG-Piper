@@ -21,7 +21,9 @@ export const verifyJWT = (req, res, next) => {
 
     // Verify token
     const decoded = jwt.verify(token, ACCESS_SECRET_KEY);
-    req.user = decoded; 
+
+   
+    req.user = decoded;
     next();
   } catch (err) {
     if (err.name === "TokenExpiredError") {

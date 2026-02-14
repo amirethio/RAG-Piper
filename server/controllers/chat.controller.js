@@ -3,6 +3,11 @@ import { chatService } from "./../services/chat/chat.service.js";
 export const askQuestion = async (req, res) => {
   try {
     const { question } = req.body;
+    const { id } = req.user;
+
+    console.log("user id new");
+    console.log(id);
+
     if (!question || question.trim() === "") {
       return res.status(400).json({
         success: false,
@@ -10,10 +15,7 @@ export const askQuestion = async (req, res) => {
       });
     }
 
-    // Call the service to get answer
-    console.log("calling cgat service");
-
-    const answer = await chatService(question);
+    const answer = await chatService(question, id);
 
     res.status(200).json({
       success: true,
