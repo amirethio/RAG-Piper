@@ -42,20 +42,30 @@ const Hero = () => {
         </div>
 
         <div className="mx-auto mt-20 grid max-w-lg grid-cols-3 gap-8">
-          {[
-            { value: "5.2", label: "Weissman Score" },
-            { value: "10x", label: "Faster Transfer" },
-            { value: "99.9%", label: "Uptime" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="font-mono text-2xl font-bold text-primary md:text-3xl">
-                {stat.value}
-              </div>
-              <div className="mt-1 text-xs text-muted-foreground md:text-sm">
-                {stat.label}
-              </div>
+          <div className="text-center">
+            <div className="font-mono text-2xl font-bold text-primary md:text-3xl">
+              5.2
             </div>
-          ))}
+            <div className="mt-1 text-xs text-muted-foreground md:text-sm">
+              Weissman Score
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="font-mono text-2xl font-bold text-primary md:text-3xl">
+              10x
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground md:text-sm">
+              Faster Transfer
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="font-mono text-2xl font-bold text-primary md:text-3xl">
+              99.9%
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground md:text-sm">
+              Uptime
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -4,7 +4,6 @@ import Feature from "../components/Feature";
 import Tech from "../components/Tech";
 import Team from "../components/Team";
 import ChatBot from "../components/ChatBot";
-// import Contact from '../components/Contact'
 
 function Landing() {
   return (
@@ -14,8 +13,6 @@ function Landing() {
       <Feature />
       <Tech />
       <Team />
-
-      {/* <Contact/> */}
       <ChatBot />
     </>
   );

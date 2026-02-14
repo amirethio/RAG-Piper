@@ -1,6 +1,6 @@
+import { FiZap } from "react-icons/fi";
 import { CiGlobe } from "react-icons/ci";
 import { FaLock } from "react-icons/fa";
-import { FiZap } from "react-icons/fi";
 
 function FeatureCard({ icon: Icon, title, description }) {
   return (

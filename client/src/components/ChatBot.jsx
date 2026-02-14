@@ -78,7 +78,7 @@ const ChatBot = () => {
             ? "pointer-events-auto scale-100 opacity-100"
             : "pointer-events-none scale-95 opacity-0"
         }`}
-        style={{ height: "480px" }}
+        style={{ height: "600px" }}
       >
         {/* HEADER */}
         <div className="flex items-center justify-between border-b border-border bg-secondary px-5 py-4">
