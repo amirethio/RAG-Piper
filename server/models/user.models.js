@@ -14,6 +14,12 @@ const userSchema = new mongoose.Schema(
       select: false,
     },
     refreshToken: { type: String },
+    role: {
+      type: String,
+      enum: ["user", "admin"],
+      default: "user", 
+    },
+    refreshToken: { type: String },
   },
   { timestamps: true },
 );
