@@ -4,11 +4,7 @@ export const submitLogin = async (params) => {
   try {
     const response = await axiosAPI.post("/auth/login", params);
     localStorage.setItem("token", response?.data?.data?.accessToken);
-        localStorage.setItem(
-          "user",
-          JSON.stringify(response?.data?.data?.user),
-        );
-
+    localStorage.setItem("user", JSON.stringify(response?.data?.data?.user));
     return response.data;
   } catch (error) {
     return error.response.data;
@@ -24,8 +20,14 @@ export const submitRegister = async (params) => {
   }
 };
 
- export const logout = () => {
-   localStorage.removeItem("token");
-   localStorage.removeItem("user");
-   setUser(null);
- };
+export const logout = async () => {
+  try {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    const response = await axiosAPI.get("auth/logout");
+    return response.data;
+  } catch (error) {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+  }
+};

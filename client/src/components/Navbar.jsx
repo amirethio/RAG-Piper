@@ -4,20 +4,20 @@ import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import { useAuth } from "../context/AuthContext";
 import axiosAPI from "../API/axiosInstance";
+import { logout } from "./../services/auth.service";
+import { useNavigate } from "react-router";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { user } = useAuth(); // get user from context
-
+  const { user, setUser } = useAuth(); // get user from context
+  const navigate = useNavigate();
   const handleLogout = async () => {
     try {
-      await axiosAPI.post("/auth/logout");
+      const response = await logout();
+      setUser(null);
+      navigate("/login");
     } catch (err) {
-      console.warn("Backend logout failed:", err);
-    } finally {
-      localStorage.removeItem("user");
-      localStorage.removeItem("token");
-      window.location.href = "/login";
+      navigate("/login");
     }
   };
 

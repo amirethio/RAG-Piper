@@ -13,8 +13,11 @@ function ProtectedRoute({ children }) {
     );
   }
 
-  // 2️⃣ Not logged in → redirect
-  if (!user) {
+  if (user == null) {
+    console.log("we are here ");
+    console.log(user);
+    
+
     return <Navigate to="/login" replace />;
   }
 

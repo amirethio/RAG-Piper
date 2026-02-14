@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Logo from "../assets/logo.png";
 import { FaGoogle, FaArrowRight, FaEye, FaEyeSlash } from "react-icons/fa";
 import { submitLogin } from "../services/auth.service.js";
-import { useNavigate } from "react-router";
-
+import { useAuth } from "../context/AuthContext.jsx";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setErrors] = useState("");
   const navigate = useNavigate();
+const { user, setUser } = useAuth()
   const handleLogin = async (event) => {
     event.preventDefault();
     const formData = {
@@ -19,9 +19,10 @@ const Login = () => {
     };
     try {
       const response = await submitLogin(formData);
-      console.log(response);
-      if (response.success == true) {
-        navigate("/");
+      setUser(response?.data.user)
+
+      if (response.success) {
+        navigate("/", { replace: true });
       }
     } catch (error) {
       setErrors("something went wrong");
