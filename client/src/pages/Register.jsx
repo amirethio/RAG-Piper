@@ -73,8 +73,7 @@ const Register = () => {
             className="w-full py-2 bg-green-500 text-black rounded hover:opacity-80"
             onClick={handleRegister}
           >
-            chore: convert all TSX components to JSX without changing content,
-            style, or functionality Sign Up
+            signup
           </button>
         </form>
 
