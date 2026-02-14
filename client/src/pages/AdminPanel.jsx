@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import { IoDocumentOutline } from "react-icons/io5";
-import { fetchDocuments, uploadDocuments } from "../services/documentService";
+import {
+  fetchDocuments,
+  uploadDocuments,
+  deleteDocument,
+} from "../services/documentService";
 import { FiUpload, FiTrash2 } from "react-icons/fi";
 
 const AdminPanel = () => {
@@ -55,6 +59,18 @@ const AdminPanel = () => {
     }
   };
 
+  const handleDelete = async (source) => {
+    try {
+      await deleteDocument(source);
+      handleFetch();
+      alert("Document deleted successfully");
+    } catch (err) {
+      console.error(err);
+      alert("Failed to delete document");
+    }
+  };
+
+  
   return (
     <div className="relative pt-16 px-8 text-white min-h-[85vh]">
       {/* Header */}
@@ -181,7 +197,7 @@ const AdminPanel = () => {
                   </td>
                   <td className="px-6 py-4 text-right">
                     <button
-                      onClick={() => handleDelete(doc)}
+                      onClick={() => handleDelete(doc?.source)}
                       className="text-red-500 hover:text-red-400"
                       title="Delete document"
                     >

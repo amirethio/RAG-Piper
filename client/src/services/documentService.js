@@ -19,3 +19,12 @@ export const fetchDocuments = async () => {
   const response = await axiosInstance.get("/admin/documents");
   return response.data;
 };
+
+export const deleteDocument = async (source) => {
+  const response = await axiosInstance.delete("/admin/delete", {
+    data: { source }, 
+  });
+  return response.data;
+};
+
+
