@@ -16,8 +16,11 @@ export const listDocuments = async () => {
   ]);
 
   return docs.map((d) => ({
-    name: d._id.split("/").pop(), 
+    name: d._id.split("/").pop(),
     source: d._id,
+    type: d._id.split("/").pop().includes(".")
+      ? d._id.split("/").pop().split(".").pop().toLowerCase()
+      : "unknown",
     chunkCount: d.count,
     createdAt: d.createdAt,
     lastUpdated: d.lastUpdated,
@@ -26,7 +29,7 @@ export const listDocuments = async () => {
 
 
 
-const deleteDocument = async (source) => {
-  const result = await Chunk.deleteMany({ "metadata.source": source });
+export const deleteDocumentsBySource = async (source) => {
+  const result = await Document.deleteMany({ "metadata.source": source });
   return result.deletedCount;
 };
