@@ -1,9 +1,8 @@
 import { Navigate } from "react-router";
 import { useAuth } from "../context/AuthContext";
 
-function ProtectedRoute({ children }) {
+function ProtectedRoute({ children, roles }) {
   const { user, loading } = useAuth();
-
   // 1️⃣ Still checking auth → block UI
   if (loading) {
     return (
@@ -17,7 +16,11 @@ function ProtectedRoute({ children }) {
     return <Navigate to="/login" replace />;
   }
 
-  // 3️⃣ Authenticated → render page
+  //  "unauthorized" page
+  if (roles && !roles.includes(user.role)) {
+    return <Navigate to="/" replace />;
+  }
+  // authorize
   return children;
 }
 

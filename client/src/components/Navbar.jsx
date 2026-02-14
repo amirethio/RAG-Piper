@@ -82,12 +82,14 @@ function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           {user?.id ? (
             <>
-              <Link
-                to="/admin"
-                className="rounded-lg bg-emerald-500 px-4 py-2 text-sm text-card hover:brightness-110"
-              >
-                Admin Panel
-              </Link>
+              {user?.role === "admin" && (
+                <Link
+                  to="/admin"
+                  className="rounded-lg bg-emerald-500 px-4 py-2 text-sm text-card hover:brightness-110"
+                >
+                  Admin Panel
+                </Link>
+              )}
               <button
                 onClick={handleLogout}
                 className="rounded-lg border border-red-500 px-4 py-2 text-sm text-red-500 hover:bg-red-500 hover:text-card"
