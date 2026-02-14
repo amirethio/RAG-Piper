@@ -14,3 +14,8 @@ export const uploadDocuments = async (stagedFiles) => {
   });
   return response.data;
 };
+
+export const fetchDocuments = async () => {
+  const response = await axiosInstance.get("/admin/documents");
+  return response.data;
+};

@@ -1,5 +1,5 @@
 import Register from "./pages/Register";
-import { Navbar } from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AdminPanel from "./pages/AdminPanel";
 import Login from "./pages/Login";

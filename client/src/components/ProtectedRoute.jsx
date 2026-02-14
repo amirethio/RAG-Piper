@@ -14,10 +14,6 @@ function ProtectedRoute({ children }) {
   }
 
   if (user == null) {
-    console.log("we are here ");
-    console.log(user);
-    
-
     return <Navigate to="/login" replace />;
   }
 
